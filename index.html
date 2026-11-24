@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edison Jara | Diseñador Multimedia</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo-icon"></div>
+      <span>Edison Jara</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#quien-soy">Quién soy</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Edison Jara:<br>
+        <span class="gradient-text">diseño multimedia</span><br>
+        que se vive
+      </h1>
+      <p class="hero-subtitle">Diseño · Tecnología · Experiencias digitales</p>
+      <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+    </div>
+    <div class="hero-visual">
+      <div class="rings">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="hexagon"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIÉN SOY -->
+  <section id="quien-soy" class="about">
+    <div class="container">
+      <h2 class="section-title">Quién soy</h2>
+      
+      <div class="about-grid">
+        <div class="about-photo">
+          <!-- Cambia "tu-foto.jpg" por el nombre de tu imagen -->
+          <div class="photo-placeholder">
+            <img src="tu-foto.jpg" alt="Edison Jara" id="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+              </svg>
+              <span>Tu foto aquí</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <div class="tag">
+            <span class="tag-icon">✦</span>
+            Diseñador Multimedia · Video Publicitario · UX/UI
+          </div>
+          
+          <p class="about-description">
+            Soy <strong>Edison Jara</strong>, diseñador multimedia con experiencia en la creación de 
+            <strong>videos publicitarios</strong>, diseño gráfico y desarrollo de interfaces digitales.
+          </p>
+          
+          <p class="about-description">
+            Me apasiona transformar ideas en experiencias visuales impactantes. Trabajo con color, 
+            movimiento y narrativa para crear piezas que conectan con las personas.
+          </p>
+
+          <div class="skills">
+            <span class="skill">Video Publicitario</span>
+            <span class="skill">Diseño Gráfico</span>
+            <span class="skill">UX / UI</span>
+            <span class="skill">Motion Graphics</span>
+            <span class="skill">Branding</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="projects">
+    <div class="container">
+      <h2 class="section-title">Mis Proyectos</h2>
+      <p class="section-subtitle">Tres áreas en las que desarrollo mi trabajo</p>
+
+      <div class="projects-grid">
+        <!-- Proyecto 1: Video -->
+        <article class="project-card">
+          <div class="project-image video">
+            <div class="project-icon">▶</div>
+            <span class="project-label">Video</span>
+          </div>
+          <div class="project-content">
+            <h3>Video Publicitario</h3>
+            <p>Creación de spots y contenido audiovisual para marcas. Narrativa, edición y motion graphics.</p>
+            <a href="#" class="btn-secondary" data-project="video">Ver proyecto</a>
+          </div>
+        </article>
+
+        <!-- Proyecto 2: Diseño Gráfico -->
+        <article class="project-card">
+          <div class="project-image graphic">
+            <div class="project-icon">✦</div>
+            <span class="project-label">Gráfico</span>
+          </div>
+          <div class="project-content">
+            <h3>Diseño de Flyers & Gráfico</h3>
+            <p>Diseño de piezas gráficas, flyers, carteles y material promocional con identidad visual fuerte.</p>
+            <a href="#" class="btn-secondary" data-project="grafico">Ver proyecto</a>
+          </div>
+        </article>
+
+        <!-- Proyecto 3: UX/UI -->
+        <article class="project-card">
+          <div class="project-image uxui">
+            <div class="project-icon">◇</div>
+            <span class="project-label">UX/UI</span>
+          </div>
+          <div class="project-content">
+            <h3>Creación de UX / UI</h3>
+            <p>Diseño de interfaces y experiencias de usuario centradas en la usabilidad y la estética digital.</p>
+            <a href="#" class="btn-secondary" data-project="uxui">Ver proyecto</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact">
+    <div class="container">
+      <h2 class="section-title">Contacto</h2>
+      <p class="section-subtitle">¿Tienes un proyecto en mente? Hablemos.</p>
+      
+      <form class="contact-form" id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Edison Jara · Diseñador Multimedia</p>
+    <p class="footer-copy">© 2026 · Todos los derechos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
