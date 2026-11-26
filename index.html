@@ -4,24 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edison Jara | Diseñador Multimedia</title>
+
+  <!-- Archivo de estilos CSS -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Fuente de Google Fonts (Inter) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- NAVBAR -->
+
+  <!-- ========================================
+       BARRA DE NAVEGACIÓN (fija arriba)
+  ======================================== -->
   <header class="navbar">
     <div class="logo">
-      <div class="logo-icon"></div>
+      <div class="logo-icon"></div> <!-- Icono hexagonal -->
       <span>Edison Jara</span>
     </div>
+
+    <!-- Enlaces del menú -->
     <nav class="nav-links">
       <a href="#inicio">Inicio</a>
       <a href="#quien-soy">Quién soy</a>
       <a href="#proyectos">Proyectos</a>
       <a href="#contacto">Contacto</a>
     </nav>
+
+    <!-- Botón del menú en móvil (hamburguesa) -->
     <button class="nav-toggle" aria-label="Abrir menú">
       <span></span>
       <span></span>
@@ -29,7 +40,9 @@
     </button>
   </header>
 
-  <!-- HERO -->
+  <!-- ========================================
+       SECCIÓN INICIO (Hero)
+  ======================================== -->
   <section id="inicio" class="hero">
     <div class="hero-content">
       <h1 class="hero-title">
@@ -40,6 +53,8 @@
       <p class="hero-subtitle">Diseño · Tecnología · Experiencias digitales</p>
       <a href="#proyectos" class="btn-primary">Ver proyectos</a>
     </div>
+
+    <!-- Anillos y hexágono animados de la derecha -->
     <div class="hero-visual">
       <div class="rings">
         <div class="ring"></div>
@@ -51,41 +66,58 @@
     </div>
   </section>
 
-  <!-- QUIÉN SOY -->
+  <!-- ========================================
+       SECCIÓN QUIÉN SOY
+  ======================================== -->
   <section id="quien-soy" class="about">
     <div class="container">
       <h2 class="section-title">Quién soy</h2>
-      
+
       <div class="about-grid">
+
+        <!-- ========== FOTO DE PERFIL ========== -->
         <div class="about-photo">
-          <!-- Cambia "tu-foto.jpg" por el nombre de tu imagen -->
           <div class="photo-placeholder">
-            <img src="tu-foto.jpg" alt="Edison Jara" id="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="photo-fallback">
+            <!--
+              CÓMO PONER TU FOTO:
+              1. Coloca tu imagen en la misma carpeta que este archivo
+              2. Cambia "foto-edison.jpg" por el nombre real de tu foto
+              Ejemplo: src="mi-foto.png"
+            -->
+            <img src="imagenes/edison_jara_perfil.jpeg" 
+                 alt="Edison Jara - Diseñador Multimedia" 
+                 class="profile-img"
+                 onerror="this.style.display='none'; document.getElementById('foto-fallback').style.display='flex';">
+
+            <!-- Este bloque solo se muestra si no encuentra la foto -->
+            <div id="foto-fallback" class="photo-fallback">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
               </svg>
-              <span>Tu foto aquí</span>
+              <span>Coloca aquí tu foto</span>
+              <small>foto-edison.jpg</small>
             </div>
           </div>
         </div>
 
+        <!-- Texto de presentación -->
         <div class="about-text">
           <div class="tag">
             <span class="tag-icon">✦</span>
             Diseñador Multimedia · Video Publicitario · UX/UI
           </div>
-          
+
           <p class="about-description">
             Soy <strong>Edison Jara</strong>, diseñador multimedia con experiencia en la creación de 
             <strong>videos publicitarios</strong>, diseño gráfico y desarrollo de interfaces digitales.
           </p>
-          
+
           <p class="about-description">
             Me apasiona transformar ideas en experiencias visuales impactantes. Trabajo con color, 
             movimiento y narrativa para crear piezas que conectan con las personas.
           </p>
 
+          <!-- Etiquetas de habilidades -->
           <div class="skills">
             <span class="skill">Video Publicitario</span>
             <span class="skill">Diseño Gráfico</span>
@@ -98,61 +130,92 @@
     </div>
   </section>
 
-  <!-- PROYECTOS -->
+  <!-- ========================================
+       SECCIÓN PROYECTOS
+  ======================================== -->
   <section id="proyectos" class="projects">
     <div class="container">
       <h2 class="section-title">Mis Proyectos</h2>
-      <p class="section-subtitle">Tres áreas en las que desarrollo mi trabajo</p>
+      <p class="section-subtitle">Tres áreas principales de mi trabajo</p>
 
       <div class="projects-grid">
-        <!-- Proyecto 1: Video -->
-        <article class="project-card">
-          <div class="project-image video">
-            <div class="project-icon">▶</div>
-            <span class="project-label">Video</span>
-          </div>
-          <div class="project-content">
-            <h3>Video Publicitario</h3>
-            <p>Creación de spots y contenido audiovisual para marcas. Narrativa, edición y motion graphics.</p>
-            <a href="#" class="btn-secondary" data-project="video">Ver proyecto</a>
-          </div>
-        </article>
 
-        <!-- Proyecto 2: Diseño Gráfico -->
+       <!-- ========== PROYECTO 1: VIDEO ========== -->
+<article class="project-card">
+  <div class="project-media video-media">
+    <div class="video-wrapper">
+      <video controls preload="metadata" poster="img/miniatura-video.jpg">
+        <source src="videos/exo final animación edison_jara.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video HTML5.
+      </video>
+    </div>
+  </div>
+  <div class="project-content">
+    <span class="project-category">Video</span>
+    <h3>Video Publicitario</h3>
+    <p>Creación de spots y contenido audiovisual para marcas. Narrativa, edición, color y motion graphics.</p>
+    <a href="#" class="btn-secondary" data-project="video">Ver más detalles</a>
+  </div>
+</article>
+
+        <!-- ========== PROYECTO 2: DISEÑO GRÁFICO ========== -->
         <article class="project-card">
-          <div class="project-image graphic">
-            <div class="project-icon">✦</div>
-            <span class="project-label">Gráfico</span>
+          <div class="project-media graphic-media">
+            <!--
+              CÓMO PONER TU IMAGEN DE FLYER:
+              1. Coloca la imagen en la misma carpeta
+              2. Cambia "flyer-ejemplo.jpg" por el nombre de tu archivo
+            -->
+            <img src="imagenes/proyecto flyer.jpg" 
+                 alt="Diseño de Flyer - Edison Jara"
+                 onerror="this.src='https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&h=400&fit=crop'; this.onerror=null;">
+            <div class="media-overlay">
+              <span>Diseño Gráfico</span>
+            </div>
           </div>
           <div class="project-content">
+            <span class="project-category">Gráfico</span>
             <h3>Diseño de Flyers & Gráfico</h3>
-            <p>Diseño de piezas gráficas, flyers, carteles y material promocional con identidad visual fuerte.</p>
-            <a href="#" class="btn-secondary" data-project="grafico">Ver proyecto</a>
+            <p>Diseño de piezas gráficas, flyers, carteles y material promocional con identidad visual fuerte y alta calidad de acabado.</p>
+            <a href="#" class="btn-secondary" data-project="grafico">Ver más detalles</a>
           </div>
         </article>
 
-        <!-- Proyecto 3: UX/UI -->
+        <!-- ========== PROYECTO 3: UX / UI ========== -->
         <article class="project-card">
-          <div class="project-image uxui">
-            <div class="project-icon">◇</div>
-            <span class="project-label">UX/UI</span>
+          <div class="project-media uxui-media">
+            <!--
+              CÓMO PONER TU CAPTURA DE UX/UI:
+              1. Coloca la imagen en la misma carpeta
+              2. Cambia "ui-ejemplo.jpg" por el nombre de tu archivo
+            -->
+            <img src="imagenes/ux ui.jpg" 
+                 alt="Diseño UX/UI - Edison Jara"
+                 onerror="this.src='https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop'; this.onerror=null;">
+            <div class="media-overlay">
+              <span>UX / UI</span>
+            </div>
           </div>
           <div class="project-content">
+            <span class="project-category">UX/UI</span>
             <h3>Creación de UX / UI</h3>
-            <p>Diseño de interfaces y experiencias de usuario centradas en la usabilidad y la estética digital.</p>
-            <a href="#" class="btn-secondary" data-project="uxui">Ver proyecto</a>
+            <p>Diseño de interfaces y experiencias de usuario centradas en usabilidad, estética digital y flujos claros para el usuario.</p>
+            <a href="#" class="btn-secondary" data-project="uxui">Ver más detalles</a>
           </div>
         </article>
+
       </div>
     </div>
   </section>
 
-  <!-- CONTACTO -->
+  <!-- ========================================
+       SECCIÓN CONTACTO
+  ======================================== -->
   <section id="contacto" class="contact">
     <div class="container">
       <h2 class="section-title">Contacto</h2>
       <p class="section-subtitle">¿Tienes un proyecto en mente? Hablemos.</p>
-      
+
       <form class="contact-form" id="contact-form">
         <div class="form-row">
           <div class="form-group">
@@ -160,7 +223,7 @@
             <input type="text" id="name" name="name" placeholder="Tu nombre" required>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">Correo electrónico</label>
             <input type="email" id="email" name="email" placeholder="tu@email.com" required>
           </div>
         </div>
@@ -173,12 +236,16 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ========================================
+       PIE DE PÁGINA
+  ======================================== -->
   <footer class="footer">
     <p>Edison Jara · Diseñador Multimedia</p>
+    <p>tik tok:@edyx_2007</p>
     <p class="footer-copy">© 2026 · Todos los derechos reservados</p>
   </footer>
 
+  <!-- Archivo JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
