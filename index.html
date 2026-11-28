@@ -13,6 +13,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+  <script src="script.js"></script>
+  <script src="canvas.js"></script>   <!-- NUEVO ARCHIVO -->
+</body>
 <body>
 
   <!-- ========================================
@@ -204,6 +207,41 @@
           </div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       LABORATORIO GENERATIVO (Tarea 8)
+  ======================================== -->
+  <section id="laboratorio" class="laboratorio">
+    <div class="container">
+      <h2 class="section-title">Mi Laboratorio Generativo</h2>
+      <p class="section-subtitle">Núcleo de Luz — Arte generativo con Canvas y JavaScript</p>
+
+      <div class="laboratorio-descripcion">
+        <p>
+          <strong>Concepto:</strong> “Núcleo de Luz” es una composición generativa que representa 
+          la energía creativa del diseño multimedia. A través de órbitas, partículas y núcleos 
+          geométricos, se construye un sistema visual que nunca se repite exactamente igual.
+        </p>
+        <p class="instrucciones">
+          Usa los botones para cambiar la paleta de color, generar una nueva composición o guardar 
+          el resultado como imagen PNG.
+        </p>
+      </div>
+
+      <!-- Controles -->
+      <div class="controles-canvas">
+        <button id="btnPaleta1" class="btn-control">Paleta Neón</button>
+        <button id="btnPaleta2" class="btn-control">Paleta Atardecer</button>
+        <button id="btnGenerar" class="btn-control principal">Generar composición</button>
+        <button id="btnGuardar" class="btn-control">Guardar PNG</button>
+      </div>
+
+      <!-- Canvas -->
+      <div class="canvas-container">
+        <canvas id="canvasGenerativo" width="900" height="560"></canvas>
       </div>
     </div>
   </section>
